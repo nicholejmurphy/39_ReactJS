@@ -1,0 +1,15 @@
+.Pokecard {
+  background-color: grey;
+  height: 300px;
+  width: 150px;
+  margin: auto;
+}
+
+.Pokecard-name {
+  color: blue;
+  font-weight: 400;
+}
+
+.Pokecard-img {
+  height: 75px;
+}
