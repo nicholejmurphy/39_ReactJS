@@ -1,0 +1,5 @@
+.Pokedex {
+  flex: auto;
+  justify-content: space-betweens;
+  margin: 20px;
+}
