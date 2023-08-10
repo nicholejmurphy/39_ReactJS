@@ -1,11 +1,13 @@
 import React from "react";
-import Pokedex from "./Pokedex.js";
-import "./App.css";
+import ReactDOM from "react-dom";
+import "./static/App.css";
+import EightBall from "./EightBall";
 
 function App() {
   return (
     <div className="App">
-      <Pokedex />
+      <h1>Welcome to the Magic EightBall!</h1>
+      <EightBall />
     </div>
   );
 }
