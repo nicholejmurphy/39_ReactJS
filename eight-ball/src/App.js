@@ -6,7 +6,7 @@ import EightBall from "./EightBall";
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to the Magic EightBall!</h1>
+      <h1 className="App-header">Welcome to the Magic EightBall!</h1>
       <EightBall />
     </div>
   );

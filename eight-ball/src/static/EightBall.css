@@ -2,7 +2,7 @@
   height: 500px;
   width: 500px;
   margin: auto;
-  /* color: black; */
+  color: blue;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -13,4 +13,29 @@
   margin: auto;
   color: white;
   font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.EightBall-restart {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.EightBall-records {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.EightBall-records-header {
+  margin: auto;
+}
+.EightBall-records-data {
+  margin: auto;
 }

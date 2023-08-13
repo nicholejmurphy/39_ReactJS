@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./static/EightBall.css";
 
 const answers = [
   { msg: "Think of a Question", color: "black" },
@@ -27,20 +28,48 @@ const answers = [
 
 const EightBall = (props) => {
   const genRandomAnswer = () => answers[Math.floor(Math.random() * 20) + 1];
-  const getAnswer = () => setAnswer(genRandomAnswer());
+  const getAnswer = () => {
+    setAnswer(genRandomAnswer());
+    if (answer.color === "green") {
+      setGreenCount(greenCount + 1);
+      console.log("GC:" + greenCount);
+    } else if (answer.color === "red") {
+      setRedCount(redCount + 1);
+      console.log("RC:" + redCount);
+    } else if (answer.color === "goldenrod") {
+      setGoldenrodCount(goldenrodCount + 1);
+      console.log("GRC:" + goldenrodCount);
+    }
+  };
   const restart = () => {
     setAnswer(answers[0]);
+    setGreenCount(0);
+    setGoldenrodCount(0);
+    setRedCount(0);
   };
   const [answer, setAnswer] = useState(answers[0]);
+  const [greenCount, setGreenCount] = useState(0);
+  const [redCount, setRedCount] = useState(0);
+  const [goldenrodCount, setGoldenrodCount] = useState(0);
   return (
-    <div onClick={getAnswer} className="EightBall">
+    <div className="EightBall">
+      <div className="EightBall-records">
+        <h3 className="EightBall-records-header">Color Records:</h3>
+        <p className="EightBall-records-data">
+          Green Count: {greenCount} | Red Count: {redCount} | Goldenrod Count:{" "}
+          {goldenrodCount}
+        </p>
+      </div>
       <div
+        onClick={getAnswer}
         className="EightBall-container"
         style={{ backgroundColor: answer.color }}
       >
         <h2 className="EightBall-answer">{answer.msg}</h2>
       </div>
-      <button onclick={restart}>Restart</button>
+      <button className="EightBall-restart" onClick={restart}>
+        Restart
+      </button>
     </div>
   );
 };
