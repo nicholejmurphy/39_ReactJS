@@ -29,16 +29,14 @@ const answers = [
 const EightBall = (props) => {
   const genRandomAnswer = () => answers[Math.floor(Math.random() * 20) + 1];
   const getAnswer = () => {
-    setAnswer(genRandomAnswer());
-    if (answer.color === "green") {
+    const newAnswer = genRandomAnswer();
+    setAnswer(newAnswer);
+    if (newAnswer.color === "green") {
       setGreenCount(greenCount + 1);
-      console.log("GC:" + greenCount);
-    } else if (answer.color === "red") {
+    } else if (newAnswer.color === "red") {
       setRedCount(redCount + 1);
-      console.log("RC:" + redCount);
-    } else if (answer.color === "goldenrod") {
+    } else if (newAnswer.color === "goldenrod") {
       setGoldenrodCount(goldenrodCount + 1);
-      console.log("GRC:" + goldenrodCount);
     }
   };
   const restart = () => {
