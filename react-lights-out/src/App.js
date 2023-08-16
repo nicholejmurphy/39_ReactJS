@@ -7,6 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <h1 className="App-header">Lights Out!</h1>
       <Board />
     </div>
   );
