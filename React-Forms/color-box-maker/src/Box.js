@@ -11,12 +11,12 @@ function Box({ id, color, width, height, removeBox }) {
       <div
         className="Box-container"
         style={{
-          backgroundColor: { color },
-          width: { width },
-          height: { height },
+          backgroundColor: color,
+          width: `${width}px`,
+          height: `${height}px`,
         }}
       ></div>
-      <button onClick={removeMe} className="Box-remove">
+      <button onClick={removeMe} className="Box-remove" data-testid={id}>
         X
       </button>
     </div>
