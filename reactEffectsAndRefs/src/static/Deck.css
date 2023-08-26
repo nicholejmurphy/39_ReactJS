@@ -1,0 +1,11 @@
+.Deck-btn {
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 2%;
+  border: none;
+  background-color: white;
+}
+
+.Deck-cardarea {
+  position: relative;
+}
